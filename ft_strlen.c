@@ -6,11 +6,19 @@
 /*   By: lmedeiro <lmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:24:09 by lmedeiro          #+#    #+#             */
-/*   Updated: 2022/09/08 18:28:34 by lmedeiro         ###   ########.fr       */
+/*   Updated: 2022/09/10 16:58:57 by lmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
+#include "libft.h"
+
 size_t	ft_strlen(const char *s)
 {
-	
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }
