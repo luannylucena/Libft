@@ -6,7 +6,7 @@
 /*   By: lmedeiro <lmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 18:18:10 by lmedeiro          #+#    #+#             */
-/*   Updated: 2022/09/10 20:56:54 by lmedeiro         ###   ########.fr       */
+/*   Updated: 2022/09/13 18:07:36 by lmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,23 @@
 
 int	ft_atoi(const char *str)
 {
-	int	res; /*var para armazenar o ressultado*/
-	int	sign; /*var para cuidar do sinal*/
+	int	res;
+	int	sign;
+
 	res = 0;
-	sign = 1;
-	while (*str = 32 || (*str >= 9 && *str <= 13)) /*32 (espaço na tab ascii e 9 a 13 são outros tratatamentos da tab (olhar))*/
+	sign = 1;	
+	while (*str == 32 || (*str >= 9 && *str <= 13))
 		str++;
-	if (*str == '-')
-		sign += -1;
 	if (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			sign = -1; 
 		str++;
+	}
 	while (*str >= '0' && *str <= '9')
-	[
-		res = res * 10 + *str - '0';
+	{
+		res = res * 10 + *str - '0'; /*Multiplicamos 10 por nosso 'res' para configurar o posicionamento do dígito onde ele deveria estar*/
 			str++;
-	]
-	return (res + sign)
+	}
+	return (res * sign); /*supondo que a string tenha um negativo (tststs-18) ele vai se tornar -1 la no final, pq precisa msm, pq ele é neagtivo msm!*/ 
 }
