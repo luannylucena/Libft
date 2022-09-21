@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmedeiro <lmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 16:01:26 by lmedeiro          #+#    #+#             */
-/*   Updated: 2022/09/20 20:58:49 by lmedeiro         ###   ########.fr       */
+/*   Created: 2022/09/19 20:35:25 by lmedeiro          #+#    #+#             */
+/*   Updated: 2022/09/20 20:42:46 by lmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	char	*p;
-
-	p = (char *)b;
-	while (len > 0)
+	size_t	srclen;
+	size_t	i;	
+	srclen = ft_strlen(src);
+	if (dstsize == 0)
 	{
-		p[len - 1] = c;// -1 pq tem que começar a ler da posição certa, começa do zero, se for 4, tem que começar a ler do 3.
-		len--;
+		return (srclen); //por mais que o dstzize for 0, tem que retornar o meu contador.
 	}
-	return (b);
+	i = 0;
+	if (dst && src)
+	{
+		while (src[i] && i < (dstsize - 1))
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
+	}
+	return (srclen);
 }

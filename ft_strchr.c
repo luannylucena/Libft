@@ -1,26 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmedeiro <lmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 16:01:26 by lmedeiro          #+#    #+#             */
-/*   Updated: 2022/09/20 20:58:49 by lmedeiro         ###   ########.fr       */
+/*   Created: 2022/09/20 21:18:02 by lmedeiro          #+#    #+#             */
+/*   Updated: 2022/09/20 21:18:54 by lmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strchr(const char *s, int c)
 {
-	char	*p;
-
-	p = (char *)b;
-	while (len > 0)
-	{
-		p[len - 1] = c;// -1 pq tem que começar a ler da posição certa, começa do zero, se for 4, tem que começar a ler do 3.
-		len--;
-	}
-	return (b);
+	
 }
