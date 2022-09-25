@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmedeiro <lmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 21:12:29 by lmedeiro          #+#    #+#             */
-/*   Updated: 2022/09/23 15:25:39 by lmedeiro         ###   ########.fr       */
+/*   Created: 2022/09/25 17:24:31 by lmedeiro          #+#    #+#             */
+/*   Updated: 2022/09/25 17:30:11 by lmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t			i;
-	unsigned char	*str1;
-	unsigned char	*str2;
+	char	*new_str;
+	int		i;
 
-	str1 = (unsigned char *) s1;
-	str2 = (unsigned char *) s2;
 	i = 0;
-	while ((str1[i] || str2[i]) && i < n)
+	new_str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (new_str == NULL)
+		return (NULL);
+	while (s[i] != '\0')
 	{
-		if (str1[i] != str2[i])
-			return (str1[i] - str2[i]);
+		new_str[i] = f(i, s[i]);
 		i++;
 	}
-	return (0);
+	new_str[i] = '\0';
+	return (new_str);
 }
