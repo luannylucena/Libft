@@ -6,7 +6,7 @@
 /*   By: lmedeiro <lmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 16:16:05 by lmedeiro          #+#    #+#             */
-/*   Updated: 2022/09/29 17:34:48 by lmedeiro         ###   ########.fr       */
+/*   Updated: 2022/09/30 16:22:31 by lmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,6 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size);
 char	**ft_split(char const *s, char c);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_itoa(int n);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif
