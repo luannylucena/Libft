@@ -6,15 +6,15 @@
 /*   By: lmedeiro <lmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 15:45:08 by lmedeiro          #+#    #+#             */
-/*   Updated: 2022/09/25 17:41:13 by lmedeiro         ###   ########.fr       */
+/*   Updated: 2022/09/29 19:27:52 by lmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
- void	ft_putendl_fd(char *s, int fd)
- {
-	 int	i;
+void	ft_putendl_fd(char *s, int fd)
+{
+    int	i;
 
 	 i = 0;
 	 while (s[i] != '\0')
@@ -23,5 +23,4 @@
 		 i++;
 	 }
 	 write(fd, "\n", 1);
- }
- 
+}

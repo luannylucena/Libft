@@ -6,7 +6,7 @@
 /*   By: lmedeiro <lmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 17:54:09 by lmedeiro          #+#    #+#             */
-/*   Updated: 2022/09/26 17:28:08 by lmedeiro         ###   ########.fr       */
+/*   Updated: 2022/09/27 15:55:15 by lmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	dest_len;
 	size_t	i;
 
-	src_len = clearft_strlen(src);
+	src_len = ft_strlen(src);
 	dest_len = ft_strlen(dest);
 	if (size == 0) //size = buffer
 		return (src_len);//retorna o tamanho da string que deveria copiar.

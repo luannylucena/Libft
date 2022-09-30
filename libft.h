@@ -6,7 +6,7 @@
 /*   By: lmedeiro <lmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 16:16:05 by lmedeiro          #+#    #+#             */
-/*   Updated: 2022/09/26 18:12:38 by lmedeiro         ###   ########.fr       */
+/*   Updated: 2022/09/29 17:34:48 by lmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strtrim(char const *s1, char const *set);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 char	**ft_split(char const *s, char c);
+void	ft_putnbr_fd(int n, int fd);
+char	*ft_itoa(int n);
 
 #endif
