@@ -6,13 +6,18 @@
 /*   By: lmedeiro <lmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 16:16:05 by lmedeiro          #+#    #+#             */
-/*   Updated: 2022/09/30 16:22:31 by lmedeiro         ###   ########.fr       */
+/*   Updated: 2022/10/01 17:12:39 by lmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
+// Antes de criar uma biblioteca precisamos conferir se ela já existe, e se não existir
+// criamos usando os cabeçalhos das funções que teremos nela.
 
-# define LIBFT_H
+#ifndef LIBFT_H // //A #ifndef diretiva verifica se o identificador não tiver sido definido
+// ou se sua definição tiver sido removida com #undef, a condição será verdadeira 
+
+# define LIBFT_H //e nesse caso ele define a libft.h (repare que usamos em MAIÚSCULAS e trocamos
+// o ponto e pelo _ )
 
 # include <stdlib.h>
 # include <unistd.h>

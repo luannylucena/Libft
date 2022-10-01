@@ -6,7 +6,7 @@
 /*   By: lmedeiro <lmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 16:11:18 by lmedeiro          #+#    #+#             */
-/*   Updated: 2022/09/29 21:04:48 by lmedeiro         ###   ########.fr       */
+/*   Updated: 2022/10/01 16:49:20 by lmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, sizeof(char));
+	write(fd, &c, sizeof(char)); //no descritor de arquivo passado, ele coloca o conteúdo de c.
 }

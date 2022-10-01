@@ -6,11 +6,14 @@
 /*   By: lmedeiro <lmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:24:31 by lmedeiro          #+#    #+#             */
-/*   Updated: 2022/09/25 17:30:11 by lmedeiro         ###   ########.fr       */
+/*   Updated: 2022/10/01 17:00:59 by lmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// essa função aloca e copia os membros da string 's' passados pela função f
+// em uma nova string
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -23,7 +26,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	while (s[i] != '\0')
 	{
-		new_str[i] = f(i, s[i]);
+		new_str[i] = f(i, s[i]); // // a nova string na posição i recebe..
+		// a ação da função f que aplica o índice i sobre o valor da string s na posição i.
 		i++;
 	}
 	new_str[i] = '\0';

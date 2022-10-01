@@ -6,18 +6,20 @@
 /*   By: lmedeiro <lmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 21:18:02 by lmedeiro          #+#    #+#             */
-/*   Updated: 2022/09/30 16:30:48 by lmedeiro         ###   ########.fr       */
+/*   Updated: 2022/10/01 16:52:19 by lmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// retorna um ponteiro para a primeira ocorrência de c na string s
 
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
 	i = 0;
-	while (s[i]) // mesma coisa de escrever 's[i] != '\0', escreve assim só pra escrever mais limpo.
+	while (s[i]) 
 	{
 		if (s[i] == (char)c) // casting para tratar o 'const' do protótipo.
 			return ((char *)s + i); //pq quem anda não é o ponteiro e sim o 'i', então acrescento ele para o ponteiro andar tb.

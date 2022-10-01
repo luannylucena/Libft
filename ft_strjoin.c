@@ -6,11 +6,13 @@
 /*   By: lmedeiro <lmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:31:22 by lmedeiro          #+#    #+#             */
-/*   Updated: 2022/09/25 17:39:36 by lmedeiro         ###   ########.fr       */
+/*   Updated: 2022/10/01 16:56:35 by lmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Concatena `s1` e `s2` em outra string; Retorna a nova string ou nulo se não conseguir alocar.
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

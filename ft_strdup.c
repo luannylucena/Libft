@@ -6,11 +6,13 @@
 /*   By: lmedeiro <lmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 16:49:01 by lmedeiro          #+#    #+#             */
-/*   Updated: 2022/09/23 17:12:21 by lmedeiro         ###   ########.fr       */
+/*   Updated: 2022/10/01 16:53:38 by lmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+//essa função duplica alocando uma string
 
 char	*ft_strdup(const char *s)
 {
