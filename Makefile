@@ -7,17 +7,17 @@ ft_strncmp.c ft_strnstr.c ft_calloc.c ft_memchr.c ft_strdup.c ft_substr.c \
 ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_strjoin.c ft_strmapi.c \
 ft_strtrim.c ft_strlcat.c ft_split.c ft_putnbr_fd.c ft_itoa.c ft_striteri.c \
 
-
-
-
 OBJS = $(SRC:.c=.o) 
+#em 'src', pego tudo que é .c e transformo em .o
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS) 
-$(OBJS): $(SRC)
-	gcc -Wall -Werror -Wextra -c $(SRC)
+	ar -rcs $(NAME) $(OBJS)
+
+$(OBJS):
+	gcc -Wall -Werror -Wextra -c $(@:.o=.c) -o $@ 
+# o '$(@:.o=.c) pega tudo que é .o e trasforma em .c; E $@ indica qual o alvo da regra, qu eno caso é -o
 
 clean:
 	/bin/rm -f *.o
@@ -26,3 +26,5 @@ fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all
+
+.PHONY : all clean fclean re #SÓ PRA EXPLICITAR QUE TODAS AS REGRAS SÃO CRIAÇÕES MINHAS DO MEU MAKEFILE E NÃO DO SISTEMA.

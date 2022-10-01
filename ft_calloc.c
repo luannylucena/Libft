@@ -6,7 +6,7 @@
 /*   By: lmedeiro <lmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 15:11:24 by lmedeiro          #+#    #+#             */
-/*   Updated: 2022/09/23 15:20:25 by lmedeiro         ###   ########.fr       */
+/*   Updated: 2022/09/30 19:47:20 by lmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
-
-	ptr = (void *) malloc (count * size);
-	if (ptr == NULL)
+	
+	if (size > 2147483647)
+		return (NULL);
+	ptr = (void *)malloc(count * size);
+	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, count * size);
-	return (ptr);
+	return (void *)ptr;
 }

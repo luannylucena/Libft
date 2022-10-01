@@ -6,7 +6,7 @@
 /*   By: lmedeiro <lmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 16:16:05 by lmedeiro          #+#    #+#             */
-/*   Updated: 2022/09/30 16:22:12 by lmedeiro         ###   ########.fr       */
+/*   Updated: 2022/09/30 16:30:31 by lmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	int	i;
-	
+
 	i = 0;
 	while (s[i]) //enquanto for verdadeiro
 	{

@@ -6,7 +6,7 @@
 /*   By: lmedeiro <lmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 18:29:01 by lmedeiro          #+#    #+#             */
-/*   Updated: 2022/09/30 16:13:06 by lmedeiro         ###   ########.fr       */
+/*   Updated: 2022/09/30 19:28:36 by lmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {   
-	if (dst && src)//Enquanto os 2 forem veradeiros
+ 	if (src > dst)
+	{
+		ft_memcpy(dst, src, len);// começo da esquerda pra direita
+	}
+	else 
 	{
 		while (len > 0)
 		{
 			len--;
-			((char *)dst)[len] = ((char *)src)[len];
-		}
-		return (dst);
+			((char *)dst)[len] = ((char *)src)[len];//direita pra esquerda, pq começo do len.
+		}	
 	}
-	else
-	{
-		return (NULL);
-	}
+	return (dst);
 }
