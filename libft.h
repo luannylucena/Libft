@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luanny <luanny@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lmedeiro <lmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 16:16:05 by lmedeiro          #+#    #+#             */
-/*   Updated: 2023/02/11 19:53:51 by luanny           ###   ########.fr       */
+/*   Updated: 2023/08/29 19:24:35 by lmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,5 @@ char	**ft_split(char const *s, char c);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_itoa(int n);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
-t_node  *ft_get_last_node(t_node *stack);
-t_node  *ft_insert_node_back(t_node **stack, t_node *new_node);
-t_node  *ft_insert_node_back(t_node **stack, t_node *new_node);
-
 
 #endif
